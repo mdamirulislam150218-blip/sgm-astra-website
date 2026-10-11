@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090811">
-  <meta name="google-site-verification" content="shVGbV3qDeWE244_AHv6XiSQvoC6276WdzboK3jL9AA" />
+  <meta name="google-site-verification" content="shVGbV3qDeWE244_AHv6XiSQvoC6276WdzboK3jL9AA">
   <meta name="description" content="SGM ASTRA is the official AI assistant project by SGM Sabbi and KriOniX AI COMPANY. Explore AI-powered conversations, productivity tools, and the official SGM ASTRA download.">
 
   <title>SGM ASTRA – Official AI Assistant | KriOniX AI COMPANY</title>
@@ -45,24 +45,36 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       font-size: 22px;
       font-weight: 900;
       letter-spacing: 1px;
+      flex-shrink: 0;
     }
 
-    .logo span { color: #a78bfa; }
+    .logo-image {
+      height: 100px;
+      max-width: 320px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%) invert(69%) sepia(18%) saturate(1716%) hue-rotate(208deg) brightness(101%) contrast(97%) drop-shadow(0 0 7px #a78bfa66);
+    }
 
-    /* Lavender logo with a soft glow */
- ```css
-.logo-image {
-  height: 100px;
-  max-width: 320px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(69%) sepia(18%) saturate(1716%) hue-rotate(208deg) brightness(101%) contrast(97%) drop-shadow(0 0 7px #a78bfa66);
-}
-```
+    .logo-text {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      line-height: 1.2;
+      white-space: nowrap;
+      background: linear-gradient(90deg, #d8b4fe, #8b5cf6, #c4b5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
     .nav-link {
       color: #c4b5fd;
       font-size: 14px;
@@ -257,26 +269,51 @@
 
     footer strong { color: #c4b5fd; }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
+      .nav {
+        padding: 17px;
+        gap: 10px;
+      }
+
+      .logo {
+        gap: 9px;
+      }
+
+      .logo-image {
+        height: 62px;
+        max-width: 150px;
+      }
+
+      .logo-text {
+        font-size: 19px;
+        letter-spacing: 1px;
+      }
+
+      .nav-link {
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
       .hero { padding: 75px 20px 65px; }
-      .nav { padding: 17px; }
       .intro { font-size: 15px; }
       .features, .about, .credits { padding: 48px 18px; }
       .download-card { padding: 22px 15px; }
+    }
+
+    @media (max-width: 360px) {
+      .logo-image { height: 48px; max-width: 95px; }
+      .logo-text { font-size: 16px; letter-spacing: 0; }
+      .nav-link { font-size: 11px; }
     }
   </style>
 </head>
 
 <body>
   <nav class="nav">
-   ```html
-<a class="logo" href="#" style="display:flex;align-items:center;gap:16px;">
-  <img class="logo-image" src="image.png" alt="SGM ASTRA Logo">
-  <span style="font-size:30px;font-weight:900;letter-spacing:2px;background:linear-gradient(90deg,#d8b4fe,#8b5cf6,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;">
-    SGM ASTRA
-  </span>
-</a>
-```
+    <a class="logo" href="#" aria-label="SGM ASTRA Home">
+      <img class="logo-image" src="image.png" alt="SGM ASTRA Logo">
+      <span class="logo-text">SGM ASTRA</span>
+    </a>
 
     <a class="nav-link" href="#features">Explore Features ↗</a>
   </nav>
